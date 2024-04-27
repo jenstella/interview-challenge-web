@@ -1,1 +1,180 @@
+/* App.css */
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.topHalf {
+  height: 60vh;
+  background-image: linear-gradient(
+    100deg,
+    hsl(240deg, 100%, 20%) 0%,
+    hsl(240deg, 100%, 20%) 20%,
+    hsl(336deg, 44%, 55%) 40%,
+    hsl(0deg, 88%, 71%) 60%,
+    hsl(303deg, 96%, 49%) 80%,
+    hsl(308deg, 100%, 50%) 100%
+  );
+  border-bottom: 10px solid hsl(308deg, 100%, 50%);
+  padding-top: 14px;
+}
+
+.content {
+  padding-left: 6rem;
+}
+
+p {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: lighter;
+  padding-top: 12px;
+}
+
+h1, h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  padding-bottom: 7rem;
+}
+
+.break {
+  border-bottom: 1px solid white;
+  width: 5%;
+}
+.bottomHalf {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Media queries for responsiveness */
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 18px;
+    width: 25%;
+    padding-top: 1rem;
+  }
+
+  .content {
+    padding-top: 3rem;
+    padding-left: 4rem;
+  }
+  
+  .topHalf {
+    height: 60vh;
+  }
+  .break {
+    width: 5%;
+    color: white;
+    padding-top: 1rem;
+  }
+  .bottomHalf {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 3rem;
+    padding-top: 2rem;
+    justify-content: start;
+  }
+
+  .videoContainer {
+    /* width: calc(25% - 10px); */
+    margin-bottom: 20px;  
+    font-family: Arial, Helvetica, sans-serif;
+    /* place-content: center; */
+  }
+
+  h3 {
+    font-size: 14px;
+    padding-top: 10px;
+  }
+
+  .videoImage {
+    width: 16rem;
+    height: 12rem;
+    border-radius: 10px;
+    align-items: center;
+  }
+  .videoDesc {
+    width: 18rem;
+    font-weight:lighter;
+    font-size: 13px;
+    color: dimgray;
+    padding-top: 10px;
+  }
+  .length {
+    font-size: 12px;
+    font-weight: bold;
+    color: dimgray;
+    padding-top: 10px;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .bottomHalf {
+    display: block; /* Change to block to stack videos */
+    padding-left: 0; /* Remove left padding to align with container */
+    padding-right: 0; /* Remove right padding to align with container */
+  }
+
+  .videoContainer {
+    width: 100%; /* Set width to full for stacking */
+    margin-bottom: 20px; /* Add margin bottom for spacing */
+    justify-content: center;
+  }
+
+  .videoImage {
+    width: 16rem;
+    height: 12rem;
+    border-radius: 10px;
+  }
+
+  .videoDesc {
+    width: 100%; /* Set description width to full */
+    font-size: 13px; /* Adjust font size */
+    padding-top: 10px; /* Add padding top for spacing */
+  }
+
+  .length {
+    font-size: 12px; /* Adjust font size */
+    font-weight: bold; /* Make bold */
+    color: dimgray; /* Adjust color */
+    padding-top: 10px; /* Add padding top for spacing */
+  }
+}
+
+
+/* Media query for smaller phones (e.g., iPhone SE) */
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    width: 50%;
+  }
+
+  .content {
+    padding-left: 12px;
+  }
+}
