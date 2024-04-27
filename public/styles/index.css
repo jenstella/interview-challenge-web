@@ -1,27 +1,68 @@
 /* App.css */
 
+/* theme colors */
+:root {
+  --primary-color: hsl(240deg, 100%, 20%);
+  --secondary-color: hsl(336deg, 44%, 55%);
+  --accent-color: rgb(225, 22, 177);
+  --text-color: white;
+  --text-light-color: dimgray;
+  --background-color: #f8f9fa;
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+.rightBanner {
+  width: 560px;
+  height: 315px;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.rightBanner iframe {
+  width: 100%;
+  height: 100%;
 }
 
 .container {
   width: 100vw;
   height: 100vh;
 }
+.videoImage {
+  width: 16rem;
+  height: 12rem;
+  border-radius: 10px;
+  align-items: center;
+  border: solid 1px var(--text-light-color);
+}
+.videoLink {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+.videoLink:hover {
+  text-decoration: none;
+}
 
 .topHalf {
   height: 60vh;
   background-image: linear-gradient(
     100deg,
-    hsl(240deg, 100%, 20%) 0%,
-    hsl(240deg, 100%, 20%) 20%,
-    hsl(336deg, 44%, 55%) 40%,
-    hsl(0deg, 88%, 71%) 60%,
-    hsl(303deg, 96%, 49%) 80%,
-    hsl(308deg, 100%, 50%) 100%
+    var(--primary-color) 0%,
+    var(--primary-color) 20%,
+    var(--secondary-color) 40%,
+    var(--accent-color) 60%,
+    var(--secondary-color) 80%,
+    var(--primary-color) 100%
   );
-  border-bottom: 10px solid hsl(308deg, 100%, 50%);
+  border-bottom: 10px solid var(--accent-color);
   padding-top: 14px;
 }
 
@@ -32,14 +73,15 @@
 p {
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: var(--text-color);
   font-weight: lighter;
   padding-top: 12px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: var(--text-color);
 }
 
 h1 {
@@ -51,12 +93,12 @@ h2 {
 }
 
 .break {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--text-color);
   width: 5%;
 }
+
 .bottomHalf {
   font-family: Arial, Helvetica, sans-serif;
-
 }
 
 /* Media queries for responsiveness */
@@ -78,13 +120,13 @@ h2 {
     padding-top: 3rem;
     padding-left: 4rem;
   }
-  
+
   .topHalf {
     height: 60vh;
   }
   .break {
     width: 5%;
-    color: white;
+    color: var(--text-color);
     padding-top: 1rem;
   }
   .bottomHalf {
@@ -97,72 +139,142 @@ h2 {
   }
 
   .videoContainer {
-    /* width: calc(25% - 10px); */
-    margin-bottom: 20px;  
+    height: 20rem;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .textUnderVideo {
+    flex-grow: 1;
+  }
+
+  .timePlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 10px;
+  }
+
+  .playButton {
+    background-color: black;
+    color: white;
+    font-weight: lighter;
     font-family: Arial, Helvetica, sans-serif;
-    /* place-content: center; */
+    border-radius: 50%;
+    width: 15px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .length {
+    font-size: 12px;
+    font-weight: bold;
+    color: dimgray;
+    display: flex;
+    align-items: center;
   }
 
   h3 {
     font-size: 14px;
     padding-top: 10px;
   }
-
-  .videoImage {
-    width: 16rem;
-    height: 12rem;
-    border-radius: 10px;
-    align-items: center;
-  }
   .videoDesc {
     width: 18rem;
-    font-weight:lighter;
+    font-weight: lighter;
     font-size: 13px;
-    color: dimgray;
+    color: var(--text-light-color);
     padding-top: 10px;
   }
+}
+
+/* phone screens */
+@media screen and (max-width: 767px) and (min-width: 321px) {
+  .topHalf {
+    height: 40vh;
+  }
+  .bottomHalf {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  h1 {
+    font-size: 28px;
+  }
+
+  h3 {
+    padding-top: 5px;
+  }
+
+  p {
+    width: 75%;
+  }
+
+  .content {
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+  .bibleProject {
+    padding-bottom: 2rem;
+  }
+
+  .videoDesc {
+    width: 90%;
+    font-size: 13px;
+    padding-top: 10px;
+  }
+  .videoContainer {
+    height: 20rem;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .textUnderVideo {
+    flex-grow: 1;
+  }
+
+  .timePlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 10px;
+  }
+
+  .playButton {
+    background-color: black;
+    color: white;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 50%;
+    width: 15px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .length {
     font-size: 12px;
     font-weight: bold;
     color: dimgray;
-    padding-top: 10px;
-  }
-
-}
-
-@media screen and (max-width: 767px) {
-  .bottomHalf {
-    display: block; /* Change to block to stack videos */
-    padding-left: 0; /* Remove left padding to align with container */
-    padding-right: 0; /* Remove right padding to align with container */
-  }
-
-  .videoContainer {
-    width: 100%; /* Set width to full for stacking */
-    margin-bottom: 20px; /* Add margin bottom for spacing */
-    justify-content: center;
-  }
-
-  .videoImage {
-    width: 16rem;
-    height: 12rem;
-    border-radius: 10px;
-  }
-
-  .videoDesc {
-    width: 100%; /* Set description width to full */
-    font-size: 13px; /* Adjust font size */
-    padding-top: 10px; /* Add padding top for spacing */
-  }
-
-  .length {
-    font-size: 12px; /* Adjust font size */
-    font-weight: bold; /* Make bold */
-    color: dimgray; /* Adjust color */
-    padding-top: 10px; /* Add padding top for spacing */
+    display: flex;
+    align-items: center;
   }
 }
-
 
 /* Media query for smaller phones (e.g., iPhone SE) */
 @media screen and (max-width: 320px) {
