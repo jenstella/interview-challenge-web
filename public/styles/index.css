@@ -10,15 +10,18 @@
   --background-color: #f8f9fa;
 }
 
+/* reset default margin and padding for all elements */
 * {
   margin: 0;
   padding: 0;
 }
+
+/* styles for the right banner which contains the video player  */
 .rightBanner {
   width: 560px;
   height: 315px;
   position: absolute;
-  top: 10%;
+  top: 20%;
   right: 5%;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -31,10 +34,13 @@
   overflow: hidden;
 }
 
+/* container for entire page */
 .container {
   width: 100vw;
   height: 100vh;
 }
+
+/* styles for the video thumbnails */
 .videoImage {
   width: 16rem;
   height: 12rem;
@@ -42,6 +48,8 @@
   align-items: center;
   border: solid 1px var(--text-light-color);
 }
+
+/* styles for the clickable video links */
 .videoLink {
   text-decoration: none;
   cursor: pointer;
@@ -51,9 +59,9 @@
 .videoLink:hover {
   text-decoration: none;
   transform: translateY(-3px);
-
 }
 
+/* styles for top section of the page */
 .topHalf {
   min-height: 50vh;
   position: relative;
@@ -68,8 +76,8 @@
   );
   border-bottom: 10px solid var(--accent-color);
   padding-top: 14px;
+  padding-bottom: 4rem;
 }
-
 
 .content {
   padding-left: 6rem;
@@ -102,16 +110,32 @@ h2 {
   width: 5%;
 }
 
+/* styles for bottom section of the page */
 .bottomHalf {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 3rem;
 }
 
+/* NEW label on first video */
+.newLabel {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: small;
+  font-weight: bold;
+}
+
 /* Media queries for responsiveness */
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 50px;
+    font-size: 35px;
   }
+
   h2 {
     font-size: 24px;
   }
@@ -128,13 +152,15 @@ h2 {
   }
 
   .topHalf {
-    height: 60vh;
+    height: 45vh;
   }
+
   .break {
     width: 5%;
     color: var(--text-color);
     padding-top: 1rem;
   }
+
   .bottomHalf {
     display: flex;
     flex-direction: row;
@@ -191,6 +217,7 @@ h2 {
     font-size: 14px;
     padding-top: 10px;
   }
+
   .videoDesc {
     width: 18rem;
     font-weight: lighter;
@@ -202,16 +229,17 @@ h2 {
 
 /* Media query for iPads */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  h1 {
+  */ h1 {
     font-size: 35px;
   }
+
   h2 {
     font-size: 24px;
   }
 
   p {
-    font-size: 18px;
-    width: 25%;
+    font-size: 25px;
+    width: 35%;
     padding-top: 1rem;
   }
 
@@ -221,13 +249,16 @@ h2 {
   }
 
   .topHalf {
-    height: 35vh;
+    height: 30vh;
+    padding-bottom: 0;
   }
+
   .break {
     width: 5%;
     color: var(--text-color);
     padding-top: 1rem;
   }
+
   .bottomHalf {
     display: flex;
     flex-direction: row;
@@ -237,21 +268,46 @@ h2 {
   }
 
   .videoContainer {
-    height: 20rem;
+    height: 22rem;
+    width: 80%;
     margin-bottom: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
+    justify-content: center;
+    margin-left: 3rem;
+  }
+  .videoImage {
+    width: 35rem;
+    height: 18rem;
+    margin: 3rem;
+  }
+  .newLabel {
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: medium;
+    font-weight: bold;
   }
 
   .textUnderVideo {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
     flex-grow: 1;
   }
 
   .timePlay {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    margin-left: 26rem;
+    width: 20rem;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -265,46 +321,50 @@ h2 {
     font-weight: lighter;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 50%;
-    width: 15px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 24px;
   }
 
   .length {
-    font-size: 12px;
+    font-size: 24px;
     font-weight: bold;
     color: dimgray;
     display: flex;
     align-items: center;
+    padding-right: 7rem;
   }
 
   h3 {
-    font-size: 14px;
+    font-size: 26px;
     padding-top: 10px;
   }
+
   .videoDesc {
     width: 18rem;
     font-weight: lighter;
-    font-size: 13px;
+    font-size: 25px;
     color: var(--text-light-color);
     padding-top: 10px;
   }
 }
 
-
 /* phone screens */
 @media screen and (max-width: 767px) and (min-width: 321px) {
   .topHalf {
-    height: 35vh;
+    height: 25vh;
   }
+
   .bottomHalf {
     display: block;
     padding-left: 0;
     padding-right: 0;
     padding-top: 1rem;
   }
+
   h1 {
     font-size: 28px;
   }
@@ -316,6 +376,7 @@ h2 {
   p {
     width: 75%;
   }
+
   .title {
     padding-bottom: 1rem;
   }
@@ -324,15 +385,30 @@ h2 {
     padding-top: 1rem;
     padding-left: 1rem;
   }
+
   .bibleProject {
     padding-bottom: 2rem;
+  }
+  /* NEW label on first video */
+  .newLabel {
+    position: absolute;
+    top: 15px;
+    left: 100px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: small;
+    font-weight: bold;
   }
 
   .videoDesc {
     width: 90%;
-    font-size: 13px;
+    font-size: 18px;
     padding-top: 10px;
   }
+
   .videoContainer {
     height: 20rem;
     margin-bottom: 20px;
@@ -344,7 +420,9 @@ h2 {
 
   .textUnderVideo {
     flex-grow: 1;
-    width: 16rem;
+    width: 17rem;
+    padding-left: 1rem;
+    margin-bottom: 4rem;
   }
 
   .timePlay {
@@ -357,7 +435,7 @@ h2 {
     right: 0;
     padding: 0 10px;
     width: 16rem;
-    padding-left: 4rem;
+    padding-left: 5.5rem;
   }
 
   .playButton {
@@ -374,19 +452,30 @@ h2 {
   }
 
   .length {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     color: dimgray;
     display: flex;
     align-items: center;
   }
+
   .rightBanner {
-    height: 50vh; /* Adjust height for smaller screens */
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 4.5rem;
   }
 
   .rightBanner iframe {
     width: 100%;
-    height: 100%;
+    height: auto;
+    display: block;
   }
 }
 
