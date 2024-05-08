@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Video from './Video'
+import Video from "./Video";
 
 export const App = () => {
   // state variables to store fetched data and selected video
@@ -75,11 +75,11 @@ export const App = () => {
           data.videoCategory &&
           data.videoCategory.videos.map((video, index) => (
             <Video
-            key={video.id}
-            video={video}
-            isNew={index === 0}
-            handleClick={handleVideoClick}
-          />
+              key={video.id}
+              video={video}
+              isNew={index === 0}
+              handleClick={handleVideoClick}
+            />
           ))}
       </div>
     </div>
