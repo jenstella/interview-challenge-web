@@ -359,14 +359,22 @@ h2 {
 /* Media query for phone screens */
 @media screen and (max-width: 767px) and (min-width: 321px) {
   .topHalf {
-    height: 25vh;
+    height: auto; /* Adjust height to fit content */
+    padding-bottom: 1rem; /* Add padding to create space between content and video */
   }
 
   .bottomHalf {
     display: block;
+    align-items: center;
     padding-left: 0;
     padding-right: 0;
     padding-top: 1rem;
+  }
+
+  .rightBanner {
+    width: 100%;
+    position: static; /* Change position to static */
+    margin-top: 1rem; /* Add margin-top to create space between content and video */
   }
 
   h1 {
@@ -443,15 +451,6 @@ h2 {
     font-size: 12px;
     font-weight: bold;
     color: dimgray;
-  }
-
-  /* adjust .rightBanner width to fit the screen */
-  .rightBanner {
-    width: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 0.5rem; 
   }
 
   /* New styles for the video grid */
