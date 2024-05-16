@@ -70,7 +70,7 @@ export const App = () => {
         )}
       </div>
 
-      <div className="bottomHalf">
+      <div className="bottomHalf videoGrid">
         {data &&
           data.videoCategory &&
           data.videoCategory.videos.map((video, index) => (

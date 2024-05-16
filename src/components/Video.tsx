@@ -31,10 +31,8 @@ const Video: React.FC<VideoProps> = ({ video, isNew, handleClick }) => {
       <div className="videoContainer">
         {isNew && <div className="newLabel">NEW</div>}
         <img
-          className={`videoImage ${isNew ? "new" : ""}`}
-          src={
-            window.innerWidth > 768 ? video.images.medium : video.images.small
-          }
+          className="videoImage"
+          src={window.innerWidth > 768 ? video.images.medium : video.images.small}
           alt={video.title}
         />
         <div className="textUnderVideo">
