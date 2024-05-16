@@ -45,7 +45,7 @@ export const App = () => {
   return (
     <div className="container">
       <div className="topHalf">
-        <div className="content">
+        <div className="topContent">
           <h2 className="bibleProject">BibleProject</h2>
           {/* Display title and description dynamically */}
           {selectedVideo && (

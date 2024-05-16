@@ -79,7 +79,7 @@
   padding-bottom: 4rem;
 }
 
-.content {
+.topContent {
   padding-left: 6rem;
 }
 
@@ -148,7 +148,7 @@ h2 {
     padding-bottom: 1rem;
   }
 
-  .content {
+  .topContent {
     padding-top: 3rem;
     padding-left: 4rem;
   }
@@ -248,14 +248,9 @@ h2 {
   }
 
   p {
-    font-size: 25px;
+    font-size: 24px;
     width: 90%;
     padding-top: 1rem;
-  }
-
-  .content {
-    padding-top: 3rem;
-    padding-left: 4rem;
   }
 
   .break {
@@ -264,10 +259,24 @@ h2 {
     padding-top: 1rem;
   }
   .topHalf {
-    position: relative;
-    height: 60%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
   }
 
+  .topContent {
+    flex-grow: 1; 
+    padding-left: 4rem;
+    padding-top: 3rem;
+  }
+
+  .rightBanner {
+    width: 50%;
+    position: static; 
+    margin-top: 1rem; 
+    margin-left: 25%;
+  }
+  
   .bottomHalf {
     display: block;
     padding-left: 0;
@@ -275,13 +284,7 @@ h2 {
     padding-top: 1rem;
   }
 
-  .rightBanner {
-    width: 50vw;
-    position: absolute;
-    top: 73%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-  }
+
 
   .videoContainer {
     height: auto;
@@ -354,8 +357,8 @@ h2 {
 /* phone screens */
 @media screen and (max-width: 767px) and (min-width: 321px) {
   .topHalf {
-    height: auto; /* Adjust height to fit content */
-    padding-bottom: 1rem; /* Add padding to create space between content and video */
+    height: auto; /* adjust height to fit content */
+    padding-bottom: 1rem; /* add padding to create space between content and video */
   }
 
   .bottomHalf {
@@ -368,8 +371,8 @@ h2 {
 
   .rightBanner {
     width: 100%;
-    position: static; /* Change position to static */
-    margin-top: 1rem; /* Add margin-top to create space between content and video */
+    position: static; /* change position to static */
+    margin-top: 1rem; /* add margin-top to create space between content and video */
   }
 
   h1 {
@@ -388,7 +391,7 @@ h2 {
     padding-bottom: 1rem;
   }
 
-  .content {
+  .topContent {
     padding-top: 1rem;
     padding-left: 1rem;
   }
@@ -464,7 +467,7 @@ h2 {
     width: 50%;
   }
 
-  .content {
+  .topContent {
     padding-left: 12px;
   }
 
