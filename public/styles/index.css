@@ -89,6 +89,7 @@ p {
   color: var(--text-color);
   font-weight: lighter;
   padding-top: 12px;
+  margin-bottom: 1rem;
 }
 
 h1,
@@ -142,8 +143,9 @@ h2 {
 
   p {
     font-size: 18px;
-    width: 25%;
+    width: 35%;
     padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .content {
@@ -247,7 +249,7 @@ h2 {
 
   p {
     font-size: 25px;
-    width: 35%;
+    width: 90%;
     padding-top: 1rem;
   }
 
@@ -256,23 +258,29 @@ h2 {
     padding-left: 4rem;
   }
 
-  .topHalf {
-    height: 30vh;
-    padding-bottom: 0;
-  }
-
   .break {
     width: 5%;
     color: var(--text-color);
     padding-top: 1rem;
   }
+  .topHalf {
+    position: relative;
+    height: 60%;
+  }
 
   .bottomHalf {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-top: 2rem;
-    justify-content: center;
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 1rem;
+  }
+
+  .rightBanner {
+    width: 50vw;
+    position: absolute;
+    top: 73%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
   }
 
   .videoContainer {
@@ -288,18 +296,7 @@ h2 {
     flex-grow: 1;
   }
 
-  .rightBanner {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 0; 
-  }
-  .rightBanner iframe {
-    width: 100%;
-    height: 100%;
-  }
+ 
 
   .timePlay {
     display: flex;
@@ -344,7 +341,6 @@ h2 {
     padding-top: 10px;
   }
 
-  /* New styles for the video grid */
   .videoGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
@@ -356,7 +352,6 @@ h2 {
 }
 
 /* phone screens */
-/* Media query for phone screens */
 @media screen and (max-width: 767px) and (min-width: 321px) {
   .topHalf {
     height: auto; /* Adjust height to fit content */
@@ -386,7 +381,7 @@ h2 {
   }
 
   p {
-    width: 75%;
+    width: 90%;
   }
 
   .title {
@@ -403,7 +398,6 @@ h2 {
   }
 
   .timePlay {
-    /* Adjust the padding to create space between timePlay and videoDesc */
     padding-top: 2rem;
     width: calc(100% - 20px); /* Adjust width to fit the content */
     position: absolute;
@@ -415,9 +409,8 @@ h2 {
     right: 0;
   }
 
-  /* Ensure proper spacing between videoDesc and timePlay */
   .videoDesc {
-    margin-bottom: 35px; /* Adjust margin to create space */
+    margin-bottom: 35px; 
   }
 
   .videoContainer {
@@ -453,7 +446,6 @@ h2 {
     color: dimgray;
   }
 
-  /* New styles for the video grid */
   .videoGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
@@ -462,7 +454,7 @@ h2 {
   }
 }
 
-/* Media query for smaller phones */
+/* for smaller phones */
 @media screen and (max-width: 320px) {
   h1 {
     font-size: 22px;
@@ -476,7 +468,6 @@ h2 {
     padding-left: 12px;
   }
 
-  /* New styles for the video grid */
   .videoGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
