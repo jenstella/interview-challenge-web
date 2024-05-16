@@ -47,13 +47,14 @@ export const App = () => {
       <div className="topHalf">
         <div className="content">
           <h2 className="bibleProject">BibleProject</h2>
-          <h1 className="title">Video Series Title</h1>
-          <div className="break"></div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam
-          </p>
+          {/* Display title and description dynamically */}
+          {selectedVideo && (
+            <>
+              <h1 className="title">{selectedVideo.title}</h1>
+              <div className="break"></div>
+              <p>{selectedVideo.description}</p>
+            </>
+          )}
         </div>
         {/* conditionally render the iframe if a video is clicked */}
         {selectedVideo && (
