@@ -25,14 +25,16 @@ const limitCharacters = (text: string, limit: number) => {
 };
 
 //video component to render individual video items
-const Video: React.FC<VideoProps> = ({ video, isNew, handleClick }) => {
+const Video = ({ video, isNew, handleClick }) => {
   return (
     <a href="#" onClick={() => handleClick(video)} className="videoLink">
       <div className="videoContainer">
         {isNew && <div className="newLabel">NEW</div>}
         <img
           className="videoImage"
-          src={window.innerWidth > 768 ? video.images.medium : video.images.small}
+          src={
+            window.innerWidth > 768 ? video.images.medium : video.images.small
+          }
           alt={video.title}
         />
         <div className="textUnderVideo">
